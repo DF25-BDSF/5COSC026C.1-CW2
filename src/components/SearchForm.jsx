@@ -5,10 +5,10 @@ export default function SearchForm({ criteria, setCriteria }) {
 
   return (
     <>
-      <h2>Search criteria (සෙවුම් නියම)</h2>
+      <h2>Search criteria</h2>
       <div className="form-grid">
         <div className="form-item">
-          <label>Type (වර්ගය)</label>
+          <label>Type</label>
           <select value={criteria.type} onChange={e => set('type', e.target.value)}>
             <option value="any">Any</option>
             <option value="house">House</option>
@@ -17,49 +17,49 @@ export default function SearchForm({ criteria, setCriteria }) {
         </div>
 
         <div className="form-item">
-          <label>Min price (අවම මිල)</label>
+          <label>Min price</label>
           <input type="number" value={criteria.minPrice} onChange={e => set('minPrice', e.target.value)} />
         </div>
 
         <div className="form-item">
-          <label>Max price (උපරිම මිල)</label>
+          <label>Max price</label>
           <input type="number" value={criteria.maxPrice} onChange={e => set('maxPrice', e.target.value)} />
         </div>
 
         <div className="form-item">
-          <label>Min bedrooms (අවම කාමර)</label>
+          <label>Min bedrooms </label>
           <input type="number" value={criteria.minBeds} onChange={e => set('minBeds', e.target.value)} />
         </div>
 
         <div className="form-item">
-          <label>Max bedrooms (උපරිම කාමර)</label>
+          <label>Max bedrooms</label>
           <input type="number" value={criteria.maxBeds} onChange={e => set('maxBeds', e.target.value)} />
         </div>
 
         <div className="form-item">
-          <label>Area (postcode prefix) (ප්‍රදේශය)</label>
+          <label>Area (postcode prefix)</label>
           <input type="text" value={criteria.area} onChange={e => set('area', e.target.value)} placeholder="e.g. NW1" />
         </div>
 
         <div className="form-item">
-          <label>Date after (දිනයෙන් පසු)</label>
+          <label>Date after</label>
           <input type="date" value={criteria.afterDate} onChange={e => set('afterDate', e.target.value)} />
         </div>
 
         <div className="form-item">
-          <label>Between start (අරඹුම)</label>
+          <label>Between start</label>
           <input type="date" value={criteria.betweenStart} onChange={e => set('betweenStart', e.target.value)} />
         </div>
 
         <div className="form-item">
-          <label>Between end (අවසානය)</label>
+          <label>Between end</label>
           <input type="date" value={criteria.betweenEnd} onChange={e => set('betweenEnd', e.target.value)} />
         </div>
       </div>
 
       <div className="actions">
         <button className="btn primary" type="button" onClick={() => setCriteria({ ...criteria })}>
-          Search (සොයන්න)
+          Search
         </button>
         <button
           className="btn"
@@ -76,7 +76,7 @@ export default function SearchForm({ criteria, setCriteria }) {
             area: ''
           })}
         >
-          Reset (යළි සකස්)
+          Reset
         </button>
       </div>
     </>
