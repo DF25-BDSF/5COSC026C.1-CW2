@@ -1,11 +1,13 @@
 import React from "react";
-import PropertyCard from "./PropertyCard.jsx";
+import PropertyCard from "./PropertyCard";
 
 export default function Results({ results, addFavourite, onCardClick }) {
   return (
     <>
-      <h2>Results (ප්‍රතිඵල)</h2>
-      {results.length === 0 && <p className="meta">No properties match your criteria.</p>}
+      <h2>Results</h2>
+      {results.length === 0 && (
+        <p className="meta">No properties match your criteria.</p>
+      )}
       <div className="results-grid">
         {results.map(p => (
           <PropertyCard
