@@ -7,4 +7,4 @@ test('switches to Floor Plan tab when clicked', () => {
   fireEvent.click(floorPlanTab);
   
   expect(screen.getByAltText(/property floor plan/i)).toBeInTheDocument();
-});
+});  
