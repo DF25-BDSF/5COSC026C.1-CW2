@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function SearchForm({ criteria, setCriteria }) {
+export default function SearchForm({ criteria, setCriteria, onSearch, onReset }) {
   const set = (key, value) => setCriteria(prev => ({ ...prev, [key]: value }));
 
   const handleReset = () => {
@@ -15,6 +15,7 @@ export default function SearchForm({ criteria, setCriteria }) {
       betweenEnd: '',
       area: ''
     });
+    if (typeof onReset === 'function') onReset();
   };
 
   return (
@@ -121,10 +122,10 @@ export default function SearchForm({ criteria, setCriteria }) {
       </div>
 
       <div className="actions">
-        <button 
-          className="btn primary" 
-          type="button" 
-          onClick={() => setCriteria({...criteria})}
+        <button
+          className="btn primary"
+          type="button"
+          onClick={() => { if (typeof onSearch === 'function') onSearch(); }}
         >
           Search
         </button>
