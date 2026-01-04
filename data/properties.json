@@ -1,0 +1,164 @@
+{
+  "properties": [
+    {
+      "id": "prop1",
+      "title": "Attractive Semi-Detached Family Home",
+      "type": "House",
+      "bedrooms": 3,
+      "price": 750000,
+      "area": "BR5",
+      "location": "Petts Wood Road, Petts Wood, Orpington BR5",
+      "dateAdded": "2022-10-12",
+      "description": "Three bedroom semi-detached family home",
+      "longDescription": "Attractive three bedroom semi-detached family home situated within 0.5 miles of Petts Wood station with fast trains to London and within easy walking distance of local shops, schools, bus routes and National Trust woodland. The property comprises entrance hall, lounge, dining room, modern fitted kitchen, three bedrooms, family bathroom, gardens front and rear, driveway providing off-street parking for two vehicles.",
+      "images": [
+        "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=800",
+        "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800",
+        "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800",
+        "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800",
+        "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800",
+        "https://images.unsplash.com/photo-1600607687644-c7171b42498b?w=800"
+      ],
+      "floorPlan": "https://images.unsplash.com/photo-1503174971373-b1f69850bded?w=800",
+      "mapImage": "https://images.unsplash.com/photo-1524661135-423995f22d0b?w=800"
+    },
+    {
+      "id": "prop2",
+      "title": "Modern Two Bedroom Garden Flat",
+      "type": "Flat",
+      "bedrooms": 2,
+      "price": 399995,
+      "area": "BR6",
+      "location": "Crofton Road, Orpington BR6",
+      "dateAdded": "2022-09-14",
+      "description": "Two double bedroom, two bathroom garden flat",
+      "longDescription": "Presented in excellent decorative order throughout is this two double bedroom, two bathroom, garden flat. The property comprises a spacious lounge/dining room with direct access to a beautiful rear garden, modern fitted kitchen with integrated appliances, two double bedrooms with built-in wardrobes, en-suite shower room to master, family bathroom, gas central heating, double glazing, and allocated parking space.",
+      "images": [
+        "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800",
+        "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800",
+        "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800",
+        "https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?w=800",
+        "https://images.unsplash.com/photo-1556912167-f556f1f39faa?w=800",
+        "https://images.unsplash.com/photo-1556909212-d5b604d0c90d?w=800",
+        "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800"
+      ],
+      "floorPlan": "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=800",
+      "mapImage": "https://images.unsplash.com/photo-1569336415962-a4bd9f69cd83?w=800"
+    },
+    {
+      "id": "prop3",
+      "title": "Spacious Detached Family Home",
+      "type": "House",
+      "bedrooms": 4,
+      "price": 895000,
+      "area": "BR7",
+      "location": "Chislehurst Road, Kent BR7",
+      "dateAdded": "2023-01-10",
+      "description": "Spacious four bedroom detached house",
+      "longDescription": "Spacious four bedroom detached house with large garden, double garage and modern kitchen. Ideal for families. The property features an impressive entrance hall with feature staircase, separate lounge with bay window and feature fireplace, open-plan kitchen/dining room with French doors to garden, utility room, ground floor cloakroom, four generous bedrooms with master having en-suite shower room, family bathroom, gas central heating, double glazing, beautifully landscaped gardens with patio area, double garage with electric door, and extensive driveway parking.",
+      "images": [
+        "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800",
+        "https://images.unsplash.com/photo-1600573472591-ee6b68d14c68?w=800",
+        "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=800",
+        "https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=800",
+        "https://images.unsplash.com/photo-1600566753151-384129cf4e3e?w=800",
+        "https://images.unsplash.com/photo-1600607687644-afd18d0e8da0?w=800",
+        "https://images.unsplash.com/photo-1600585152915-d208bec867a1?w=800",
+        "https://images.unsplash.com/photo-1600585152220-90363fe7e115?w=800"
+      ],
+      "floorPlan": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800",
+      "mapImage": "https://images.unsplash.com/photo-1577717903315-1691ae25ab3f?w=800"
+    },
+    {
+      "id": "prop4",
+      "title": "Modern City Apartment",
+      "type": "Flat",
+      "bedrooms": 1,
+      "price": 275000,
+      "area": "BR1",
+      "location": "Bromley High Street, Bromley BR1",
+      "dateAdded": "2023-02-05",
+      "description": "Modern one-bedroom apartment",
+      "longDescription": "Modern one-bedroom apartment close to city transport links, ideal for first-time buyers. Features open-plan living area with contemporary fitted kitchen with integrated appliances including fridge/freezer, washing machine, and dishwasher, double bedroom with built-in wardrobes, modern bathroom with white suite and shower over bath, electric heating, double glazing, video entry system, and communal gardens.",
+      "images": [
+        "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800",
+        "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=800",
+        "https://images.unsplash.com/photo-1502672023488-70e25813eb80?w=800",
+        "https://images.unsplash.com/photo-1615529328331-f8917597711f?w=800",
+        "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800",
+        "https://images.unsplash.com/photo-1615875474908-9612e2947dd8?w=800"
+      ],
+      "floorPlan": "https://images.unsplash.com/photo-1544029504-897d31faf9ba?w=800",
+      "mapImage": "https://images.unsplash.com/photo-1519003722824-194d4455a60c?w=800"
+    },
+    {
+      "id": "prop5",
+      "title": "Luxury Five Bedroom Home",
+      "type": "House",
+      "bedrooms": 5,
+      "price": 1150000,
+      "area": "BR7",
+      "location": "Elmstead Lane, Chislehurst BR7",
+      "dateAdded": "2023-03-20",
+      "description": "Luxury five bedroom family home",
+      "longDescription": "Luxury five bedroom family home with landscaped garden, private parking and modern interiors. This exceptional property offers spacious accommodation including grand entrance hall with feature staircase and guest cloakroom, three reception rooms including formal dining room and family room, stunning kitchen/breakfast room with premium appliances and granite worktops, separate utility room, five bedrooms including master suite with dressing area and en-suite bathroom, additional en-suite to bedroom two, family bathroom, gas central heating, double glazing, professionally landscaped gardens with outdoor kitchen and entertainment area, double garage with electric door, and gated driveway with parking for multiple vehicles.",
+      "images": [
+        "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800",
+        "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800",
+        "https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?w=800",
+        "https://images.unsplash.com/photo-1600573472550-8090b5e0745e?w=800",
+        "https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=800",
+        "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=800",
+        "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800"
+      ],
+      "floorPlan": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800",
+      "mapImage": "https://images.unsplash.com/photo-1551651653-c5beb276e04f?w=800"
+    },
+    {
+      "id": "prop6",
+      "title": "Three Bedroom Flat with Balcony",
+      "type": "Flat",
+      "bedrooms": 3,
+      "price": 485000,
+      "area": "BR6",
+      "location": "Orpington High Street, Orpington BR6",
+      "dateAdded": "2023-04-02",
+      "description": "Three bedroom flat with balcony",
+      "longDescription": "Three bedroom flat with balcony, lift access and secure parking near shopping centre. The property comprises entrance hall with storage cupboard, spacious lounge with balcony access offering lovely views, separate dining room, fitted kitchen with modern appliances, three bedrooms with master having en-suite shower room, family bathroom with white suite and shower over bath, gas central heating, double glazing, lift access to all floors, secure entry phone system, allocated parking space in secure underground car park, and communal gardens.",
+      "images": [
+        "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800",
+        "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800",
+        "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800",
+        "https://images.unsplash.com/photo-1560185893-a55cbc8c57e8?w=800",
+        "https://images.unsplash.com/photo-1560185007-cde436f6a4d0?w=800",
+        "https://images.unsplash.com/photo-1560184897-ae75f418493e?w=800",
+        "https://images.unsplash.com/photo-1560185009-dddeb820c7b7?w=800",
+        "https://images.unsplash.com/photo-1560185127-6a7e30f3d46d?w=800"
+      ],
+      "floorPlan": "https://images.unsplash.com/photo-1609137144813-7d9921338f24?w=800",
+      "mapImage": "https://images.unsplash.com/photo-1508766206392-8bd5cf550d1c?w=800"
+    },
+    {
+      "id": "prop7",
+      "title": "Well-Presented Bungalow",
+      "type": "House",
+      "bedrooms": 2,
+      "price": 525000,
+      "area": "TN14",
+      "location": "Sevenoaks Road, Kent TN14",
+      "dateAdded": "2023-05-18",
+      "description": "Well-presented bungalow",
+      "longDescription": "Well-presented bungalow with spacious garden, driveway parking and quiet surroundings. This charming property offers entrance porch with tiled floor, hallway with storage cupboard, bright lounge with feature bay window and gas fireplace, modern fitted kitchen/diner with range of wall and base units and space for dining table, two double bedrooms with fitted wardrobes, contemporary bathroom with white suite including shower cubicle, gas central heating, double glazing throughout, conservatory overlooking rear garden with French doors, extensive gardens to front and rear, and driveway parking for multiple vehicles.",
+      "images": [
+        "https://images.unsplash.com/photo-1598228723793-52759bba239c?w=800",
+        "https://images.unsplash.com/photo-1600566752229-250ed79470e0?w=800",
+        "https://images.unsplash.com/photo-1600047509782-20d39509f26d?w=800",
+        "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800",
+        "https://images.unsplash.com/photo-1600573472592-401b489a3cdc?w=800",
+        "https://images.unsplash.com/photo-1600585154363-67eb9e2e2099?w=800"
+      ],
+      "floorPlan": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800",
+      "mapImage": "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=800"
+    }
+  ]
+}
