@@ -1,10 +1,10 @@
 import React, { useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
-import SearchForm from './SearchForm';
-import Results from './Results';
-import Favourites from './Favourites';
-import propertiesDataRaw from './data/properties.json?raw';
-import { FavouritesContext } from './FavouritesContext';
+import SearchForm from '../components/SearchForm';
+import Results from '../components/Results';
+import Favourites from '../components/Favourites';
+import propertiesDataRaw from '../data/properties.json?raw';
+import { FavouritesContext } from '../context/FavouritesContext';
 
 const propertiesData = JSON.parse(propertiesDataRaw);
 
@@ -27,7 +27,6 @@ export default function SearchPage() {
 
   const [results, setResults] = useState(allProperties);
 
-  // Filtering now happens only when the user clicks Search
   const handleSearch = () => {
     const filtered = allProperties.filter(property => {
       if (criteria.type !== 'any' && property.type.toLowerCase() !== criteria.type.toLowerCase()) {
@@ -87,8 +86,6 @@ export default function SearchPage() {
     });
     setResults(allProperties);
   };
-
-  // when rendering the favourites panel we pass full property objects down there internally
 
   const handleCardClick = (id) => {
     navigate(`/property/${id}`);

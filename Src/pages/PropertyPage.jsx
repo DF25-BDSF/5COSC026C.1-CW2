@@ -1,9 +1,9 @@
 import React, { useState, useContext } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import Gallery from "./Gallery";
-import Tabs from "./Tabs";
-import propertiesDataRaw from './data/properties.json?raw';
-import { FavouritesContext } from './FavouritesContext';
+import Gallery from "../components/Gallery";
+import Tabs from "../components/Tabs";
+import propertiesDataRaw from '../data/properties.json?raw';
+import { FavouritesContext } from '../context/FavouritesContext';
 
 const propertiesData = JSON.parse(propertiesDataRaw);
 

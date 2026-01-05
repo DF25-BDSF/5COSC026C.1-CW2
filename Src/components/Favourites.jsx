@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
-import { FavouritesContext } from './FavouritesContext';
-import propertiesDataRaw from './data/properties.json?raw';
+import { FavouritesContext } from '../context/FavouritesContext';
+import propertiesDataRaw from '../data/properties.json?raw';
 
 const propertiesData = JSON.parse(propertiesDataRaw);
 

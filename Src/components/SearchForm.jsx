@@ -1,20 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
+
+const defaultCriteria = {
+  type: 'any',
+  minPrice: '',
+  maxPrice: '',
+  minBeds: '',
+  maxBeds: '',
+  afterDate: '',
+  betweenStart: '',
+  betweenEnd: '',
+  area: ''
+};
 
 export default function SearchForm({ criteria, setCriteria, onSearch, onReset }) {
-  const set = (key, value) => setCriteria(prev => ({ ...prev, [key]: value }));
+  const [internalCriteria, setInternalCriteria] = useState(defaultCriteria);
+
+  const currentCriteria = criteria ?? internalCriteria;
+  const setCurrentCriteria = setCriteria ?? setInternalCriteria;
+
+  const set = (key, value) => setCurrentCriteria(prev => ({ ...prev, [key]: value }));
 
   const handleReset = () => {
-    setCriteria({
-      type: 'any',
-      minPrice: '',
-      maxPrice: '',
-      minBeds: '',
-      maxBeds: '',
-      afterDate: '',
-      betweenStart: '',
-      betweenEnd: '',
-      area: ''
-    });
+    setCurrentCriteria(defaultCriteria);
     if (typeof onReset === 'function') onReset();
   };
 
@@ -23,10 +30,10 @@ export default function SearchForm({ criteria, setCriteria, onSearch, onReset })
       <h2>Search criteria</h2>
       <div className="form-grid">
         <div className="form-item">
-          <label htmlFor="type">Type</label>
+          <label htmlFor="type">Property type</label>
           <select 
             id="type"
-            value={criteria.type} 
+            value={currentCriteria.type} 
             onChange={e => set('type', e.target.value)}
           >
             <option value="any">Any</option>
@@ -40,9 +47,9 @@ export default function SearchForm({ criteria, setCriteria, onSearch, onReset })
           <input 
             id="minPrice"
             type="number" 
-            value={criteria.minPrice} 
+            value={currentCriteria.minPrice} 
             onChange={e => set('minPrice', e.target.value)}
-            placeholder="e.g. 200000"
+            placeholder="Min price"
           />
         </div>
 
@@ -51,9 +58,9 @@ export default function SearchForm({ criteria, setCriteria, onSearch, onReset })
           <input 
             id="maxPrice"
             type="number" 
-            value={criteria.maxPrice} 
+            value={currentCriteria.maxPrice} 
             onChange={e => set('maxPrice', e.target.value)}
-            placeholder="e.g. 500000"
+            placeholder="Max price"
           />
         </div>
 
@@ -62,7 +69,7 @@ export default function SearchForm({ criteria, setCriteria, onSearch, onReset })
           <input 
             id="minBeds"
             type="number" 
-            value={criteria.minBeds} 
+            value={currentCriteria.minBeds} 
             onChange={e => set('minBeds', e.target.value)}
             placeholder="e.g. 2"
           />
@@ -73,7 +80,7 @@ export default function SearchForm({ criteria, setCriteria, onSearch, onReset })
           <input 
             id="maxBeds"
             type="number" 
-            value={criteria.maxBeds} 
+            value={currentCriteria.maxBeds} 
             onChange={e => set('maxBeds', e.target.value)}
             placeholder="e.g. 4"
           />
@@ -84,9 +91,9 @@ export default function SearchForm({ criteria, setCriteria, onSearch, onReset })
           <input 
             id="area"
             type="text" 
-            value={criteria.area} 
+            value={currentCriteria.area} 
             onChange={e => set('area', e.target.value)} 
-            placeholder="e.g. BR1, NW1"
+            placeholder="Postcode (e.g. BR1, NW1)"
           />
         </div>
 
@@ -95,7 +102,7 @@ export default function SearchForm({ criteria, setCriteria, onSearch, onReset })
           <input 
             id="afterDate"
             type="date" 
-            value={criteria.afterDate} 
+            value={currentCriteria.afterDate} 
             onChange={e => set('afterDate', e.target.value)}
           />
         </div>
@@ -105,7 +112,7 @@ export default function SearchForm({ criteria, setCriteria, onSearch, onReset })
           <input 
             id="betweenStart"
             type="date" 
-            value={criteria.betweenStart} 
+            value={currentCriteria.betweenStart} 
             onChange={e => set('betweenStart', e.target.value)}
           />
         </div>
@@ -115,7 +122,7 @@ export default function SearchForm({ criteria, setCriteria, onSearch, onReset })
           <input 
             id="betweenEnd"
             type="date" 
-            value={criteria.betweenEnd} 
+            value={currentCriteria.betweenEnd} 
             onChange={e => set('betweenEnd', e.target.value)}
           />
         </div>

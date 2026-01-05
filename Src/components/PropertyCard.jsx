@@ -1,9 +1,12 @@
 import React from "react";
 
-export default function PropertyCard({ property, onFavourite, onClick }) {
+export default function PropertyCard({ property = {}, onFavourite, onClick }) {
   const onDragStart = (e) => {
-    e.dataTransfer.setData("text/plain", property.id);
+    if (property && property.id) e.dataTransfer.setData("text/plain", property.id);
   };
+
+  const imgSrc = (property.images && property.images[0]) || property.mainImage || '';
+  const priceText = property.price ? `£${property.price.toLocaleString()}` : '';
 
   return (
     <div
@@ -12,16 +15,16 @@ export default function PropertyCard({ property, onFavourite, onClick }) {
       onDragStart={onDragStart}
     >
       <img 
-        src={property.images[0]} 
-        alt={`${property.title} cover`} 
+        src={imgSrc} 
+        alt={`${property.title || 'property'} cover`} 
       />
       <div className="property-info">
         <div className="price">
-          £{property.price.toLocaleString()}
+          {priceText}
         </div>
         <div>{property.title}</div>
         <div className="meta">
-          {property.type} • {property.bedrooms} beds • {property.area}
+          {property.type} {property.bedrooms ? `• ${property.bedrooms} beds` : ''} {property.area ? `• ${property.area}` : ''}
         </div>
         <div className="actions">
           <button 

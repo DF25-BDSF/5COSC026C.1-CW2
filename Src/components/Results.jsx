@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import PropertyCard from "./PropertyCard";
-import { FavouritesContext } from './FavouritesContext';
+import { FavouritesContext } from '../context/FavouritesContext';
 
 
 export default function Results({ results, onCardClick }) {

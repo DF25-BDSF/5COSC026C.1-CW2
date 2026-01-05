@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import SearchPage from './SearchPage';
-import PropertyPage from './PropertyPage';
+import SearchPage from './pages/SearchPage';
+import PropertyPage from './pages/PropertyPage';
 import './App.css';
-import { FavouritesProvider } from './FavouritesContext';
+import { FavouritesProvider } from './context/FavouritesContext';
 
 export default function App() {
   return (
