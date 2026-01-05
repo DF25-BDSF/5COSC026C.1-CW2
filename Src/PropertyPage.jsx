@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import Gallery from "./Gallery";
 import Tabs from "./Tabs";
 import propertiesDataRaw from './data/properties.json?raw';
+import { FavouritesContext } from './FavouritesContext';
 
 const propertiesData = JSON.parse(propertiesDataRaw);
 
@@ -11,19 +12,8 @@ export default function PropertyPage() {
   const navigate = useNavigate();
   const allProperties = propertiesData.properties;
   const property = allProperties.find(p => p.id === id);
+  const { addFavourite, removeFavourite } = useContext(FavouritesContext);
   const [activeTab, setActiveTab] = useState("desc");
-  const [favourites, setFavourites] = useState([]);
-
-  const addFavourite = (propertyId) => {
-    const prop = allProperties.find(p => p.id === propertyId);
-    if (prop && !favourites.find(f => f.id === propertyId)) {
-      setFavourites([...favourites, prop]);
-    }
-  };
-
-  const removeFavourite = (propertyId) => {
-    setFavourites(favourites.filter(f => f.id !== propertyId));
-  };
 
   if (!property) {
     return (

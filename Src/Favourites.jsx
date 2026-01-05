@@ -1,7 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { FavouritesContext } from './FavouritesContext';
+import propertiesDataRaw from './data/properties.json?raw';
 
-export default function Favourites({ favourites, removeFavourite, clearFavourites }) {
+const propertiesData = JSON.parse(propertiesDataRaw);
+
+export default function Favourites() {
   const [dragOver, setDragOver] = useState(false);
+  const { favourites, removeFavourite, clearFavourites, addFavourite } = useContext(FavouritesContext);
 
   const onDragOver = (e) => { 
     e.preventDefault(); 
@@ -15,7 +20,10 @@ export default function Favourites({ favourites, removeFavourite, clearFavourite
   const onDrop = (e) => {
     setDragOver(false);
     const id = e.dataTransfer.getData("text/plain");
+    if (id) addFavourite(id);
   };
+
+  const favouritesProps = (favourites || []).map(f => propertiesData.properties.find(p => p.id === f.id)).filter(Boolean);
 
   return (
     <div
@@ -29,15 +37,15 @@ export default function Favourites({ favourites, removeFavourite, clearFavourite
         <button 
           className="btn warn" 
           onClick={clearFavourites}
-          disabled={favourites.length === 0}
+          disabled={favouritesProps.length === 0}
         >
           Clear list
         </button>
       </div>
-      {favourites.length === 0 && (
+      {favouritesProps.length === 0 && (
         <p className="meta">Drag cards here or use Favourite buttons.</p>
       )}
-      {favourites.map(p => (
+      {favouritesProps.map(p => (
         <div 
           key={p.id} 
           className="fav-item" 

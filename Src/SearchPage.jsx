@@ -1,15 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import SearchForm from './SearchForm';
 import Results from './Results';
 import Favourites from './Favourites';
 import propertiesDataRaw from './data/properties.json?raw';
+import { FavouritesContext } from './FavouritesContext';
 
 const propertiesData = JSON.parse(propertiesDataRaw);
 
 export default function SearchPage() {
   const allProperties = propertiesData.properties;
   const navigate = useNavigate();
+  const { favourites, addFavourite, removeFavourite, clearFavourites } = useContext(FavouritesContext);
   
   const [criteria, setCriteria] = useState({
     type: 'any',
@@ -24,7 +26,6 @@ export default function SearchPage() {
   });
 
   const [results, setResults] = useState(allProperties);
-  const [favourites, setFavourites] = useState([]);
 
   // Filtering now happens only when the user clicks Search
   const handleSearch = () => {
@@ -87,20 +88,7 @@ export default function SearchPage() {
     setResults(allProperties);
   };
 
-  const addFavourite = (id) => {
-    const property = allProperties.find(p => p.id === id);
-    if (property && !favourites.find(f => f.id === id)) {
-      setFavourites([...favourites, property]);
-    }
-  };
-
-  const removeFavourite = (id) => {
-    setFavourites(favourites.filter(f => f.id !== id));
-  };
-
-  const clearFavourites = () => {
-    setFavourites([]);
-  };
+  // when rendering the favourites panel we pass full property objects down there internally
 
   const handleCardClick = (id) => {
     navigate(`/property/${id}`);
@@ -125,22 +113,17 @@ export default function SearchPage() {
       <main className="content">
         <Results 
           results={results} 
-          addFavourite={addFavourite}
           onCardClick={handleCardClick}
         />
       </main>
 
       <aside 
-        className="favourites-sidebar"
-        onDrop={handleDrop}
-        onDragOver={handleDragOver}
-      >
-        <Favourites 
-          favourites={favourites}
-          removeFavourite={removeFavourite}
-          clearFavourites={clearFavourites}
-        />
-      </aside>
+          className="favourites-sidebar"
+          onDrop={handleDrop}
+          onDragOver={handleDragOver}
+        >
+          <Favourites />
+        </aside>
     </div>
   );
 }
