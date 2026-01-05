@@ -8,9 +8,9 @@ export default function Favourites() {
   const [dragOver, setDragOver] = useState(false);
   const { favourites, removeFavourite, clearFavourites, addFavourite } = useContext(FavouritesContext);
 
-  const onDragOver = (e) => { 
-    e.preventDefault(); 
-    setDragOver(true); 
+  const onDragOver = (e) => {
+    e.preventDefault();
+    setDragOver(true);
   };
 
   const onDragLeave = () => {
@@ -18,6 +18,7 @@ export default function Favourites() {
   };
 
   const onDrop = (e) => {
+    e.preventDefault();
     setDragOver(false);
     const id = e.dataTransfer.getData("text/plain");
     if (id) addFavourite(id);
@@ -34,8 +35,8 @@ export default function Favourites() {
     >
       <h3>Favourites</h3>
       <div className="actions">
-        <button 
-          className="btn warn" 
+        <button
+          className="btn warn"
           onClick={clearFavourites}
           disabled={favouritesProps.length === 0}
         >
@@ -46,15 +47,15 @@ export default function Favourites() {
         <p className="meta">Drag cards here or use Favourite buttons.</p>
       )}
       {favouritesProps.map(p => (
-        <div 
-          key={p.id} 
-          className="fav-item" 
+        <div
+          key={p.id}
+          className="fav-item"
           draggable
           onDragStart={(e) => e.dataTransfer.setData("text/plain", p.id)}
         >
           <span>{p.title}</span>
-          <button 
-            className="btn" 
+          <button
+            className="btn"
             onClick={() => removeFavourite(p.id)}
           >
             Delete

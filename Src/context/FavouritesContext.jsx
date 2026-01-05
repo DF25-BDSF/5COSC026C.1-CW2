@@ -6,9 +6,12 @@ export function FavouritesProvider({ children }) {
   const [favourites, setFavourites] = useState([]);
 
   const addFavourite = (id) => {
-    if (!favourites.find(f => f.id === id)) {
-      setFavourites(prev => [...prev, { id }]);
-    }
+    setFavourites(prev => {
+      if (prev.find(f => f.id === id)) {
+        return prev;
+      }
+      return [...prev, { id }];
+    });
   };
 
   const removeFavourite = (id) => {
